@@ -13,6 +13,7 @@ import ui.DisplayConstants;
 import ui.Main;
 
 public class StartController {
+    @FXML private Button graphs_button;
     @FXML private Button new_game_button;
     @FXML private Button game_log_button;
     @FXML private Button stats_button;
