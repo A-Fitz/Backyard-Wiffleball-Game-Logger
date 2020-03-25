@@ -133,13 +133,6 @@ public class NewGameController implements Initializable {
                         .or(third_inning_t1_doubles.textProperty().isEmpty())
                         .or(third_inning_t1_triples.textProperty().isEmpty())
                         .or(third_inning_t1_homeruns.textProperty().isEmpty())
-                        .or((third_inning_t2_runs.textProperty().isEmpty()
-                                .and(third_inning_t2_walks.textProperty().isEmpty())
-                                .and(third_inning_t2_strikeouts.textProperty().isEmpty())
-                                .and(third_inning_t2_singles.textProperty().isEmpty())
-                                .and(third_inning_t2_doubles.textProperty().isEmpty())
-                                .and(third_inning_t2_triples.textProperty().isEmpty())
-                                .and(third_inning_t2_homeruns.textProperty().isEmpty())).not())
                         .or(season_textfield.textProperty().isEmpty())
                         .or(date.valueProperty().isNull())
         );
@@ -178,13 +171,13 @@ public class NewGameController implements Initializable {
         }
         if(team1Id == null)
         {
-            Team team = new Team(team1_name.textProperty().toString());
+            Team team = new Team(team1_name.textProperty().getValue());
             databaseConnection.insert(team);
             team1Id = team.getId();
         }
         if(team2Id == null)
         {
-            Team team = new Team(team2_name.textProperty().toString());
+            Team team = new Team(team2_name.textProperty().getValue());
             databaseConnection.insert(team);
             team2Id = team.getId();
         }
