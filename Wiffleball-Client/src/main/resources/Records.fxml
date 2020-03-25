@@ -3,292 +3,580 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.RecordsController">
+<GridPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.RecordsController">
     <columnConstraints>
-        <ColumnConstraints percentWidth="12.5" />
-        <ColumnConstraints percentWidth="10.0" />
-        <ColumnConstraints percentWidth="10.0" />
-        <ColumnConstraints percentWidth="15.0" />
-        <ColumnConstraints percentWidth="12.5" />
-        <ColumnConstraints percentWidth="10.0" />
-        <ColumnConstraints percentWidth="10.0" />
-        <ColumnConstraints percentWidth="15.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
-        <RowConstraints percentHeight="4" />
+        <RowConstraints percentHeight="95.0" valignment="CENTER" vgrow="ALWAYS" />
+        <RowConstraints vgrow="SOMETIMES" />
     </rowConstraints>
-    <padding>
-        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-    </padding>
     <children>
-        <Label text="Records - In Game" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-        </Label>
-        <Label fx:id="team1_name" text="Austin" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-            <font>
-                <Font name="System Italic" size="14.0" />
-            </font>
-        </Label>
-        <Label fx:id="team2_name" text="Colin" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-            <font>
-                <Font name="System Italic" size="14.0" />
-            </font>
-        </Label>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <content>
+                <VBox fx:id="vbox" spacing="15.0">
+                    <GridPane fx:id="singleGameGridPane" alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="12.5" />
+                            <ColumnConstraints percentWidth="10.0" />
+                            <ColumnConstraints percentWidth="10.0" />
+                            <ColumnConstraints percentWidth="15.0" />
+                            <ColumnConstraints percentWidth="12.5" />
+                            <ColumnConstraints percentWidth="10.0" />
+                            <ColumnConstraints percentWidth="10.0" />
+                            <ColumnConstraints percentWidth="15.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                        </rowConstraints>
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                        <children>
+                            <Label text="Records - In Game" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="18.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="team1_name" text="Austin" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Italic" size="14.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="team2_name" text="Colin" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Italic" size="14.0" />
+                                </font>
+                            </Label>
 
-        <Label text="Max" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Label>
-        <Label text="Record" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Number of Times" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Dates" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Runs" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Plate Appearances" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="At Bats" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Walks" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Strikeouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Fieldouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Hits" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Singles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Doubles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Triples" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Homeruns" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Max" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label text="Record" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Number of Times" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Dates" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Runs" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Plate Appearances" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="At Bats" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Walks" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Strikeouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Fieldouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Hits" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Singles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Doubles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Triples" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Homeruns" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
 
-        <Label text="Max" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Label>
-        <Label text="Record" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Number of Times" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Dates" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Runs" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Plate Appearances" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="At Bats" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Walks" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Strikeouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Fieldouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Hits" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Singles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Doubles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Triples" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Homeruns" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-
-
-
-        
-
-        <Label text="Min" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Label>
-        <Label text="Record" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Number of Times" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Dates" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Runs" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Plate Appearances" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="At Bats" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Walks" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Strikeouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Fieldouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Hits" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Singles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Doubles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Triples" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Homeruns" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_record_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_count_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t1_dates_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-
-        <Label text="Min" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Label>
-        <Label text="Record" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Number of Times" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Dates" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Runs" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Plate Appearances" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="At Bats" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Walks" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Strikeouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Fieldouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Hits" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Singles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Doubles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Triples" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <Label text="Homeruns" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_record_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_count_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-        <TextField fx:id="t2_dates_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Max" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label text="Record" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Number of Times" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Dates" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Runs" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Plate Appearances" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="At Bats" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Walks" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Strikeouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Fieldouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Hits" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Singles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Doubles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Triples" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Homeruns" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
 
 
+                            <Label text="Min" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label text="Record" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Number of Times" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Dates" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Runs" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Plate Appearances" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="At Bats" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Walks" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Strikeouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Fieldouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Hits" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Singles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Doubles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Triples" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Homeruns" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_record_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_count_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t1_dates_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+
+                            <Label text="Min" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label text="Record" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Number of Times" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Dates" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Runs" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Plate Appearances" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="At Bats" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Walks" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Strikeouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Fieldouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Hits" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Singles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Doubles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Triples" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Homeruns" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_record_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_count_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleGame_t2_dates_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                        </children>
+                    </GridPane>
+
+                    <GridPane fx:id="singleInningGridPane" alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="12.5" />
+                            <ColumnConstraints percentWidth="10.0" />
+                            <ColumnConstraints percentWidth="10.0" />
+                            <ColumnConstraints percentWidth="15.0" />
+                            <ColumnConstraints percentWidth="12.5" />
+                            <ColumnConstraints percentWidth="10.0" />
+                            <ColumnConstraints percentWidth="10.0" />
+                            <ColumnConstraints percentWidth="15.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                            <RowConstraints percentHeight="4" />
+                        </rowConstraints>
+                        <padding>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </padding>
+                        <children>
+                            <Label text="Records - In Inning" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="18.0" />
+                                </font>
+                            </Label>
+                            <Label text="{team1_name.text}" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Italic" size="14.0" />
+                                </font>
+                            </Label>
+                            <Label text="{team2_name.text}" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Italic" size="14.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="Max" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label text="Record" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Number of Times" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Dates" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Runs" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Plate Appearances" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="At Bats" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Walks" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Strikeouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Fieldouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Hits" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Singles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Doubles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Triples" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Homeruns" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+
+                            <Label text="Max" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label text="Record" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Number of Times" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Dates" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Runs" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_runs" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Plate Appearances" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="At Bats" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Walks" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_walks" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Strikeouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Fieldouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Hits" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_hits" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Singles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_singles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Doubles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Triples" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_triples" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Homeruns" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_max_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="13" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
 
 
-        
-        <Button fx:id="back_button" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="26" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Min" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label text="Record" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Number of Times" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Dates" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Runs" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Plate Appearances" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="At Bats" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Walks" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Strikeouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Fieldouts" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Hits" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Singles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Doubles" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Triples" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Homeruns" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_record_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_count_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t1_dates_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+
+                            <Label text="Min" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <font>
+                                    <Font name="System Bold" size="12.0" />
+                                </font>
+                            </Label>
+                            <Label text="Record" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Number of Times" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Dates" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="14" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Runs" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_runs" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Plate Appearances" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_plateAppearances" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="16" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="At Bats" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_atBats" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="17" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Walks" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_walks" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="18" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Strikeouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_strikeouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="19" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Fieldouts" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_fieldouts" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="20" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Hits" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_hits" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="21" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Singles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_singles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="22" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Doubles" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_doubles" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="23" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Triples" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_triples" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="24" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <Label text="Homeruns" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_record_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_count_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                            <TextField fx:id="singleInning_t2_dates_min_homeruns" editable="false" focusTraversable="false" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="25" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                        </children>
+                    </GridPane>
+                </VBox>
+            </content>
+        </ScrollPane>
+        <Button fx:id="back_button" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets left="5.0" />
+            </GridPane.margin>
+        </Button>
     </children>
 </GridPane>
