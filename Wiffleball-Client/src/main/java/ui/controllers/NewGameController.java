@@ -223,7 +223,6 @@ public class NewGameController implements Initializable {
         try {
             fillGameStats();
             fillSeasonStats();
-            fillAlltimeStats();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -446,62 +445,6 @@ public class NewGameController implements Initializable {
         plateAppearance.setResult_id(PlateAppearanceResultEnums.RESULT_TYPE_TO_RESULT_ID_MAP.get(result_type));
 
         databaseConnection.insert(plateAppearance);
-    }
-
-    private void fillAlltimeStats() throws SQLException {
-        List<Season_Stats> season_statsList = databaseConnection.getSeasonStatsList();
-        List<Team> teamList = databaseConnection.getTeamList();
-
-        databaseConnection.clearAlltimeStats();
-
-        for (Team team : teamList) {
-            int teamId = team.getId();
-            int wins = 0;
-            int losses = 0;
-            int ties = 0;
-            int h_runs = 0;
-            int h_strikeouts = 0;
-            int h_fieldouts = 0;
-            int h_walks = 0;
-            int h_singles = 0;
-            int h_doubles = 0;
-            int h_triples = 0;
-            int h_homeruns = 0;
-            int p_runs = 0;
-            int p_strikeouts = 0;
-            int p_fieldouts = 0;
-            int p_walks = 0;
-            int p_singles = 0;
-            int p_doubles = 0;
-            int p_triples = 0;
-            int p_homeruns = 0;
-
-            for (Season_Stats season_stats : season_statsList) {
-                if (season_stats.getTeam_id().equals(teamId)) {
-                    wins += season_stats.getWins();
-                    losses += season_stats.getLosses();
-                    ties += season_stats.getTies();
-                    h_runs += season_stats.getH_runs();
-                    h_strikeouts += season_stats.getH_strikeouts();
-                    h_fieldouts += season_stats.getH_fieldouts();
-                    h_walks += season_stats.getH_walks();
-                    h_singles += season_stats.getH_singles();
-                    h_doubles += season_stats.getH_doubles();
-                    h_triples += season_stats.getH_triples();
-                    h_homeruns += season_stats.getH_homeruns();
-                    p_runs += season_stats.getP_runs();
-                    p_strikeouts += season_stats.getP_strikeouts();
-                    p_fieldouts += season_stats.getP_fieldouts();
-                    p_walks += season_stats.getP_walks();
-                    p_singles += season_stats.getP_singles();
-                    p_doubles += season_stats.getP_doubles();
-                    p_triples += season_stats.getP_triples();
-                    p_homeruns += season_stats.getP_homeruns();
-                }
-            }
-            Alltime_Stats alltime_stats = new Alltime_Stats(teamId, wins, losses, ties, h_runs, h_strikeouts, h_fieldouts, h_walks, h_singles, h_doubles, h_triples, h_homeruns, p_runs, p_strikeouts, p_fieldouts, p_walks, p_singles, p_doubles, p_triples, p_homeruns);
-            databaseConnection.insert(alltime_stats);
-        }
     }
 
     private void fillSeasonStats() throws SQLException {

@@ -271,48 +271,6 @@ public class DatabaseConnection {
         return rowsEffected;
     }
 
-    public int insert(Alltime_Stats alltime_stats) {
-        String queryTemplate = "INSERT INTO alltime_stats"
-                + "(" + Alltime_Stats.TEAM_ID_COLUMN_NAME + ", " + Alltime_Stats.WINS_COLUMN_NAME + ", " + Alltime_Stats.LOSSES_COLUMN_NAME + ", " + Alltime_Stats.TIES_COLUMN_NAME + ", " + Alltime_Stats.H_RUNS_COLUMN_NAME + ", " + Alltime_Stats.H_STRIKEOUTS_COLUMN_NAME + ", " + Alltime_Stats.H_FIELDOUTS_COLUMN_NAME + ", " + Alltime_Stats.H_WALKS_COLUMN_NAME + ", " + Alltime_Stats.H_SINGLES_COLUMN_NAME + ", " + Alltime_Stats.H_DOUBLES_COLUMN_NAME + ", " + Alltime_Stats.H_TRIPLES_COLUMN_NAME + ", " + Alltime_Stats.H_HOMERUNS_COLUMN_NAME + ", " + Alltime_Stats.P_RUNS_COLUMN_NAME + ", " + Alltime_Stats.P_STRIKEOUTS_COLUMN_NAME + ", " + Alltime_Stats.P_FIELDOUTS_COLUMN_NAME + ", " + Alltime_Stats.P_WALKS_COLUMN_NAME + ", " + Alltime_Stats.P_SINGLES_COLUMN_NAME + ", " + Alltime_Stats.P_DOUBLES_COLUMN_NAME + ", " + Alltime_Stats.P_TRIPLES_COLUMN_NAME + ", " + Alltime_Stats.P_HOMERUNS_COLUMN_NAME + ") "
-                + "VALUES(:team_id, :wins, :losses, :ties, :h_runs, :h_strikeouts, :h_fieldouts, :h_walks, :h_singles, :h_doubles, :h_triples, :h_homeruns, :p_runs, :p_strikeouts, :p_fieldouts, :p_walks, :p_singles, :p_doubles, :p_triples, :p_homeruns)";
-
-        MapSqlParameterSource parameters = new MapSqlParameterSource();
-        parameters.addValue("team_id", alltime_stats.getTeam_id());
-        parameters.addValue("wins", alltime_stats.getWins());
-        parameters.addValue("losses", alltime_stats.getLosses());
-        parameters.addValue("ties", alltime_stats.getTies());
-        parameters.addValue("h_runs", alltime_stats.getH_runs());
-        parameters.addValue("h_strikeouts", alltime_stats.getH_strikeouts());
-        parameters.addValue("h_fieldouts", alltime_stats.getH_fieldouts());
-        parameters.addValue("h_walks", alltime_stats.getH_walks());
-        parameters.addValue("h_singles", alltime_stats.getH_singles());
-        parameters.addValue("h_doubles", alltime_stats.getH_doubles());
-        parameters.addValue("h_triples", alltime_stats.getH_triples());
-        parameters.addValue("h_homeruns", alltime_stats.getH_homeruns());
-        parameters.addValue("p_runs", alltime_stats.getP_runs());
-        parameters.addValue("p_strikeouts", alltime_stats.getP_strikeouts());
-        parameters.addValue("p_fieldouts", alltime_stats.getP_fieldouts());
-        parameters.addValue("p_walks", alltime_stats.getP_walks());
-        parameters.addValue("p_singles", alltime_stats.getP_singles());
-        parameters.addValue("p_doubles", alltime_stats.getP_doubles());
-        parameters.addValue("p_triples", alltime_stats.getP_triples());
-        parameters.addValue("p_homeruns", alltime_stats.getP_homeruns());
-
-        List<Map<String, Object>> keyList = new ArrayList<>();
-
-        KeyHolder keyHolder = new GeneratedKeyHolder(keyList);
-
-        int rowsEffected = namedParameterJdbcTemplate.update(queryTemplate, parameters, keyHolder);
-
-        Map<String, Object> keyMap = keyHolder.getKeys();
-
-        int id = (int) keyMap.get(Alltime_Stats.ID_COLUMN_NAME);
-
-        alltime_stats.setId(id);
-
-        return rowsEffected;
-    }
-
     public int update(Season_Stats season_stats) {
         String queryTemplate = "UPDATE season_stats "
                 + "SET " + Season_Stats.LAST_GAME_ID_COLUMN_NAME + " = " + ":last_game_id, "
@@ -478,19 +436,5 @@ public class DatabaseConnection {
         }
 
         return season_statsList;
-    }
-
-    public List<Alltime_Stats> getAlltimeStatsList() throws SQLException {
-        String queryTemplate = "SELECT * FROM alltime_stats";
-        PreparedStatement preparedStatement = connection.prepareStatement(queryTemplate);
-        ResultSet resultSet = preparedStatement.executeQuery();
-
-        List<Alltime_Stats> alltime_statsList = new ArrayList<>();
-        while (resultSet.next()) {
-            Alltime_Stats alltime_stats = new Alltime_Stats(resultSet.getInt(Season_Stats.ID_COLUMN_NAME), resultSet.getInt(Season_Stats.TEAM_ID_COLUMN_NAME), resultSet.getInt(Season_Stats.WINS_COLUMN_NAME), resultSet.getInt(Season_Stats.LOSSES_COLUMN_NAME), resultSet.getInt(Season_Stats.TIES_COLUMN_NAME), resultSet.getInt(Season_Stats.H_RUNS_COLUMN_NAME), resultSet.getInt(Season_Stats.H_STRIKEOUTS_COLUMN_NAME), resultSet.getInt(Season_Stats.H_FIELDOUTS_COLUMN_NAME), resultSet.getInt(Season_Stats.H_WALKS_COLUMN_NAME), resultSet.getInt(Season_Stats.H_SINGLES_COLUMN_NAME), resultSet.getInt(Season_Stats.H_DOUBLES_COLUMN_NAME), resultSet.getInt(Season_Stats.H_TRIPLES_COLUMN_NAME), resultSet.getInt(Season_Stats.H_HOMERUNS_COLUMN_NAME), resultSet.getInt(Season_Stats.P_RUNS_COLUMN_NAME), resultSet.getInt(Season_Stats.P_STRIKEOUTS_COLUMN_NAME), resultSet.getInt(Season_Stats.P_FIELDOUTS_COLUMN_NAME), resultSet.getInt(Season_Stats.P_WALKS_COLUMN_NAME), resultSet.getInt(Season_Stats.P_SINGLES_COLUMN_NAME), resultSet.getInt(Season_Stats.P_DOUBLES_COLUMN_NAME), resultSet.getInt(Season_Stats.P_TRIPLES_COLUMN_NAME), resultSet.getInt(Season_Stats.P_HOMERUNS_COLUMN_NAME));
-            alltime_statsList.add(alltime_stats);
-        }
-
-        return alltime_statsList;
     }
 }
