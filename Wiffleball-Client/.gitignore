@@ -1,4 +1,6 @@
 *.pass
+# I realize this is unnecessary but I don't care enough at the moment.
+.idea/ 
 
 # Created by https://www.gitignore.io/api/java,intellij,windows
 # Edit at https://www.gitignore.io/?templates=java,intellij,windows

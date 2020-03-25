@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import ui.IntegerTextField?>
+
+<GridPane alignment="CENTER" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controllers.NewGameController">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="11.111" />
+        <ColumnConstraints percentWidth="11.111" />
+        <ColumnConstraints percentWidth="11.111" />
+        <ColumnConstraints percentWidth="11.111" />
+        <ColumnConstraints percentWidth="11.111" />
+        <ColumnConstraints percentWidth="11.111" />
+        <ColumnConstraints percentWidth="11.111" />
+        <ColumnConstraints percentWidth="11.111" />
+        <ColumnConstraints percentWidth="11.111" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="9.285" prefHeight="30.0" />
+        <RowConstraints percentHeight="9.285" />
+        <RowConstraints percentHeight="9.285" />
+        <RowConstraints percentHeight="9.285" />
+        <RowConstraints percentHeight="9.285" />
+        <RowConstraints percentHeight="9.285" />
+        <RowConstraints percentHeight="9.285" />
+        <RowConstraints percentHeight="9.285" />
+        <RowConstraints minHeight="10.0" percentHeight="9.285" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="9.285" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="9.285" prefHeight="30.0" />
+    </rowConstraints>
+    <children>
+        <Label alignment="CENTER" text="Runs" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="Walks" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="K" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="1b" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="2b" textAlignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="3b" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="HR" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="2" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="3" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="team1_name" promptText="Team1" text="Austin" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="team2_name" promptText="Team2" text="Colin" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label alignment="CENTER" text="${team1_name.text}" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="${team1_name.text}" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="${team1_name.text}" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="${team2_name.text}" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="${team2_name.text}" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" text="${team2_name.text}" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <IntegerTextField fx:id="first_inning_t1_runs" alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t1_walks" alignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t1_strikeouts" alignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t1_singles" alignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t1_doubles" alignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t1_triples" alignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t1_homeruns" alignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t2_runs" alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t2_walks" alignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t2_strikeouts" alignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t2_singles" alignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t2_doubles" alignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t2_triples" alignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="first_inning_t2_homeruns" alignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+
+        <IntegerTextField fx:id="second_inning_t1_runs" alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t1_walks" alignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t1_strikeouts" alignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t1_singles" alignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t1_doubles" alignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t1_triples" alignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t1_homeruns" alignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t2_runs" alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t2_walks" alignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t2_strikeouts" alignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t2_singles" alignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t2_doubles" alignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t2_triples" alignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="second_inning_t2_homeruns" alignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+
+        <IntegerTextField fx:id="third_inning_t1_runs" alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t1_walks" alignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t1_strikeouts" alignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t1_singles" alignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t1_doubles" alignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t1_triples" alignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t1_homeruns" alignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t2_runs" alignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t2_walks" alignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t2_strikeouts" alignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t2_singles" alignment="CENTER" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t2_doubles" alignment="CENTER" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t2_triples" alignment="CENTER" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="third_inning_t2_homeruns" alignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <Label text="New Game" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="done_button" mnemonicParsing="false" onAction="#done_button_fired" text="Create" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <IntegerTextField fx:id="season_textfield" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <Label text="Season:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <DatePicker fx:id="date" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <Label text="Date:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+        <Label alignment="CENTER" text="Total" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <IntegerTextField fx:id="totalT1Runs" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+        <IntegerTextField fx:id="totalT1Walks" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+        <IntegerTextField fx:id="totalT1Strikeouts" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+        <IntegerTextField fx:id="totalT1Singles" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+        <IntegerTextField fx:id="totalT1Doubles" editable="false" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+        <IntegerTextField fx:id="totalT1Triples" editable="false" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+        <IntegerTextField fx:id="totalT1Homeruns" editable="false" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+        <IntegerTextField fx:id="totalT2Runs" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+        <IntegerTextField fx:id="totalT2Walks" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+        <IntegerTextField fx:id="totalT2Strikeouts" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+        <IntegerTextField fx:id="totalT2Singles" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+        <IntegerTextField fx:id="totalT2Doubles" editable="false" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+        <IntegerTextField fx:id="totalT2Triples" editable="false" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+        <IntegerTextField fx:id="totalT2Homeruns" editable="false" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+      <Button fx:id="back_button" mnemonicParsing="false" onAction="#backButtonClicked" text="Back" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</GridPane>

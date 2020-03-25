@@ -1,0 +1,138 @@
+DROP TABLE IF EXISTS Team CASCADE;
+DROP TABLE IF EXISTS Plate_Appearance_Result_Type CASCADE;
+DROP TABLE IF EXISTS Season CASCADE;
+DROP TABLE IF EXISTS Game CASCADE;
+DROP TABLE IF EXISTS Inning CASCADE;
+DROP TABLE IF EXISTS Plate_Appearance CASCADE;
+DROP TABLE IF EXISTS Game_Stats CASCADE;
+DROP TABLE IF EXISTS Season_Stats CASCADE;
+DROP TABLE IF EXISTS Alltime_Stats CASCADE;
+
+CREATE TABLE IF NOT EXISTS Team (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  team_name citext NOT NULL UNIQUE
+);
+INSERT INTO Team (team_name) VALUES
+  ('Austin'),
+  ('Colin');
+
+CREATE TABLE IF NOT EXISTS Plate_Appearance_Result_Type (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  result_type text NOT NULL
+);
+INSERT INTO Plate_Appearance_Result_Type (result_type) VALUES
+  ('WALK'),
+  ('STRIKEOUT'),
+  ('FIELDOUT'),
+  ('SINGLE'),
+  ('DOUBLE'),
+  ('TRIPLE'),
+  ('HOMERUN');
+
+CREATE TABLE IF NOT EXISTS Season (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY
+);
+INSERT INTO Season DEFAULT VALUES;
+INSERT INTO Season DEFAULT VALUES;
+
+CREATE TABLE IF NOT EXISTS Game (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  season_id INTEGER REFERENCES Season(id) NOT NULL,
+  date_of_game DATE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Inning (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  game_id INTEGER REFERENCES Game(id) NOT NULL,
+  inning_number INTEGER NOT NULL,
+  team1_id INTEGER NOT NULL,
+  team2_id INTEGER NOT NULL,
+  team1_runs INTEGER NOT NULL,
+  team2_runs INTEGER,
+  UNIQUE(game_id, inning_number)
+);
+
+CREATE TABLE IF NOT EXISTS Plate_Appearance (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  inning_id INTEGER REFERENCES Inning(id) NOT NULL,
+  game_id INTEGER REFERENCES Game(id) NOT NULL,
+  season_id INTEGER REFERENCES Season(id) NOT NULL,
+  pitcher_id INTEGER REFERENCES Team(id) NOT NULL,
+  batter_id INTEGER REFERENCES Team(id) NOT NULL,
+  result_id INTEGER REFERENCES Plate_Appearance_Result_Type(id) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Game_Stats (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  game_id INTEGER REFERENCES Game(id) NOT NULL,
+  season_id INTEGER REFERENCES Season(id) NOT NULL,
+  team_id INTEGER REFERENCES Team(id) NOT NULL,
+  h_runs INTEGER NOT NULL,
+  h_strikeouts INTEGER NOT NULL,
+  h_fieldouts INTEGER NOT NULL,
+  h_walks INTEGER NOT NULL,
+  h_singles INTEGER NOT NULL,
+  h_doubles INTEGER NOT NULL,
+  h_triples INTEGER NOT NULL,
+  h_homeruns INTEGER NOT NULL,
+  p_runs INTEGER NOT NULL,
+  p_strikeouts INTEGER NOT NULL,
+  p_fieldouts INTEGER NOT NULL,
+  p_walks INTEGER NOT NULL,
+  p_singles INTEGER NOT NULL,
+  p_doubles INTEGER NOT NULL,
+  p_triples INTEGER NOT NULL,
+  p_homeruns INTEGER NOT NULL,
+  UNIQUE (game_id, team_id)
+);
+
+CREATE TABLE IF NOT EXISTS Season_Stats (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  season_id INTEGER REFERENCES Season(id) NOT NULL,
+  last_game_id INTEGER REFERENCES Game(id) NOT NULL,
+  team_id INTEGER REFERENCES Team(id) NOT NULL,
+  wins INTEGER NOT NULL,
+  losses INTEGER NOT NULL,
+  ties INTEGER NOT NULL,
+  h_runs INTEGER NOT NULL,
+  h_strikeouts INTEGER NOT NULL,
+  h_fieldouts INTEGER NOT NULL,
+  h_walks INTEGER NOT NULL,
+  h_singles INTEGER NOT NULL,
+  h_doubles INTEGER NOT NULL,
+  h_triples INTEGER NOT NULL,
+  h_homeruns INTEGER NOT NULL,
+  p_runs INTEGER NOT NULL,
+  p_strikeouts INTEGER NOT NULL,
+  p_fieldouts INTEGER NOT NULL,
+  p_walks INTEGER NOT NULL,
+  p_singles INTEGER NOT NULL,
+  p_doubles INTEGER NOT NULL,
+  p_triples INTEGER NOT NULL,
+  p_homeruns INTEGER NOT NULL,
+  UNIQUE (season_id, team_id)
+);
+
+CREATE TABLE IF NOT EXISTS Alltime_Stats (
+  id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  team_id INTEGER REFERENCES Team(id) NOT NULL UNIQUE,
+  wins INTEGER NOT NULL,
+  losses INTEGER NOT NULL,
+  ties INTEGER NOT NULL,
+  h_runs INTEGER NOT NULL,
+  h_strikeouts INTEGER NOT NULL,
+  h_fieldouts INTEGER NOT NULL,
+  h_walks INTEGER NOT NULL,
+  h_singles INTEGER NOT NULL,
+  h_doubles INTEGER NOT NULL,
+  h_triples INTEGER NOT NULL,
+  h_homeruns INTEGER NOT NULL,
+  p_runs INTEGER NOT NULL,
+  p_strikeouts INTEGER NOT NULL,
+  p_fieldouts INTEGER NOT NULL,
+  p_walks INTEGER NOT NULL,
+  p_singles INTEGER NOT NULL,
+  p_doubles INTEGER NOT NULL,
+  p_triples INTEGER NOT NULL,
+  p_homeruns INTEGER NOT NULL
+);
