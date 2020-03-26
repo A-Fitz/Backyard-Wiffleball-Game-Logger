@@ -7,9 +7,10 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 
-import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -28,7 +29,15 @@ public class DatabaseConnection {
 
     private DatabaseConnection() {
         try {
-            List<String> dbConnectionFileLines = Files.readAllLines(Paths.get("./db_connection.pass"));
+            List<String> dbConnectionFileLines = new ArrayList<>();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/db_connection.pass")));
+
+            String line = reader.readLine();
+            while (line != null) {
+                dbConnectionFileLines.add(line);
+                line = reader.readLine();
+            }
+            reader.close();
 
             dataSource = new DriverManagerDataSource();
             dataSource.setUrl(dbConnectionFileLines.get(0));
@@ -47,7 +56,7 @@ public class DatabaseConnection {
     }
 
     /**
-     * Only the Main class should call this for sake of speed.
+     * Only the ui.Main class should call this for sake of speed.
      * @return The Singleton instance of the class.
      */
     public static DatabaseConnection getInstance() {
@@ -55,7 +64,7 @@ public class DatabaseConnection {
     }
 
     /**
-     * Used by Main class to check when the instance is made.
+     * Used by ui.Main class to check when the instance is made.
      * @return True if the instance is created
      */
     public boolean operate()

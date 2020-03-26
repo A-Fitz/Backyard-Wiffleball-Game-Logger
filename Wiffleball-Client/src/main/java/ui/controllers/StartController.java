@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import ui.DisplayConstants;
-import ui.Main;
+import ui.Launcher;
 
 public class StartController {
     @FXML private Button graphs_button;
@@ -27,7 +27,7 @@ public class StartController {
             stage.setScene(new Scene(root, DisplayConstants.NEWGAME_SCREEN_WIDTH, DisplayConstants.NEWGAME_SCREEN_HEIGHT));
             stage.show();
             stage.setTitle("Wiffleball Gamekeeper - New Game");
-            Main.stg.close();
+            Launcher.stg.close();
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Issue loading the New Game screen.", ButtonType.OK);
             alert.show();
@@ -43,7 +43,7 @@ public class StartController {
             stage.setScene(new Scene(root, DisplayConstants.GAMELOG_SCREEN_WIDTH, DisplayConstants.GAMELOG_SCREEN_HEIGHT));
             stage.show();
             stage.setTitle("Wiffleball Gamekeeper - Game Log");
-            Main.stg.close();
+            Launcher.stg.close();
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Issue loading the Game Log screen.", ButtonType.OK);
             alert.show();
@@ -59,7 +59,7 @@ public class StartController {
             stage.setScene(new Scene(root, DisplayConstants.STATS_SCREEN_WIDTH, DisplayConstants.STATS_SCREEN_HEIGHT));
             stage.show();
             stage.setTitle("Wiffleball Gamekeeper - Raw Stats");
-            Main.stg.close();
+            Launcher.stg.close();
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Issue loading the Raw Stats screen.", ButtonType.OK);
             alert.show();
@@ -75,7 +75,7 @@ public class StartController {
             stage.setScene(new Scene(root, DisplayConstants.GRAPHS_SCREEN_WIDTH, DisplayConstants.GRAPHS_SCREEN_HEIGHT));
             stage.show();
             stage.setTitle("Wiffleball Gamekeeper - Graphical Stats");
-            Main.stg.close();
+            Launcher.stg.close();
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Issue loading the Graphical Stats screen.", ButtonType.OK);
             alert.show();
@@ -91,7 +91,7 @@ public class StartController {
             stage.setScene(new Scene(root, DisplayConstants.RECORDS_SCREEN_WIDTH, DisplayConstants.RECORDS_SCREEN_HEIGHT));
             stage.show();
             stage.setTitle("Wiffleball Gamekeeper - Records");
-            Main.stg.close();
+            Launcher.stg.close();
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Issue loading the Records screen.", ButtonType.OK);
             alert.show();

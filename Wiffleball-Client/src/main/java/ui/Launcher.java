@@ -52,4 +52,8 @@ public class Launcher extends Application {
         });
         new Thread(task).start();
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

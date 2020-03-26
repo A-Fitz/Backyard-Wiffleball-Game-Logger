@@ -1,3 +1,4 @@
+
 # Backyard Wiffleball Scorekeeper
 This is a WIP program which serves to act as an interface to interact with Wiffleball game stats. I have created this over the span of a few days during the first stay-at-home order period of COVID-19 pandemic. My little brother, Colin, and I have played tons of backyard wiffleball/baseball; we have created our own rules and love to keep stats. This system (the client and database) allows us to store and interact with our game stats. 
 
@@ -8,6 +9,8 @@ At the moment the system currently allows for adding new games as well as viewin
 -------------------------------------------------------------------------------------------------------------------------------
 
 The RDBMS in use is PostreSQL version 12.2. The Java SDK in use is OpenJDK 11.0.6.10 along with the JavaFX 11.0.2 SDK. Also used are the most recent Spring Framework libraries applicable for JBDC.
+
+Environment setup: You will need to create a file named db_connection.pass in the src/main/resources folder; that file should contain 3 lines, the URL, username, and password for the database. To run, use the Maven plugin task "javafx.run". To package the jar, use the Maven task "package". Use the jar generated in the shade folder.
 
 -------------------------------------------------------------------------------------------------------------------------------
 

@@ -13,7 +13,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import stats.StatsBreakdown;
-import ui.Main;
+import ui.Launcher;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -38,7 +38,7 @@ public class GraphsController implements Initializable {
     private Team team2;
 
     public GraphsController() {
-        databaseConnection = Main.databaseConnection;
+        databaseConnection = Launcher.databaseConnection;
     }
 
     @Override
@@ -293,7 +293,7 @@ public class GraphsController implements Initializable {
     public void backButtonClicked(ActionEvent actionEvent) {
         Stage stage = (Stage) back_button.getScene().getWindow();
         stage.close();
-        Main.stg.show();
+        Launcher.stg.show();
     }
 
     private StringConverter<Number> gamesIntegerAxis = new StringConverter<>() {

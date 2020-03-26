@@ -6,7 +6,7 @@ import database.tables.Plate_Appearance;
 import database.tables.Game_Stats;
 import database.tables.Inning;
 import database.tables.Season_Stats;
-import ui.Main;
+import ui.Launcher;
 
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -28,7 +28,7 @@ public class StatsBreakdown {
     private int teamId;
 
     public StatsBreakdown(int teamId) throws SQLException {
-        DatabaseConnection databaseConnection = Main.databaseConnection;
+        DatabaseConnection databaseConnection = Launcher.databaseConnection;
 
         season_statsList = databaseConnection.getSeasonStatsList();
         game_statsList = databaseConnection.getGameStatsList();

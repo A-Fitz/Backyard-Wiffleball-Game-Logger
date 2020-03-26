@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import stats.RecordsBreakdown;
 import stats.Records;
-import ui.Main;
+import ui.Launcher;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -294,7 +294,7 @@ public class RecordsController implements Initializable {
 
     public RecordsController()
     {
-        databaseConnection = Main.databaseConnection;
+        databaseConnection = Launcher.databaseConnection;
     }
 
     @Override
@@ -650,6 +650,6 @@ public class RecordsController implements Initializable {
     public void backButtonClicked(ActionEvent actionEvent) {
         Stage stage = (Stage) back_button.getScene().getWindow();
         stage.close();
-        Main.stg.show();
+        Launcher.stg.show();
     }
 }

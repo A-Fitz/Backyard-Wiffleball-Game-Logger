@@ -5,7 +5,7 @@ import database.PlateAppearanceResultEnums;
 import database.tables.Game_Stats;
 import database.tables.Inning;
 import database.tables.Plate_Appearance;
-import ui.Main;
+import ui.Launcher;
 
 import java.sql.SQLException;
 import java.util.Iterator;
@@ -22,7 +22,7 @@ public class RecordsBreakdown {
     private int teamId;
 
     public RecordsBreakdown(int teamId) throws SQLException {
-        DatabaseConnection databaseConnection = Main.databaseConnection;
+        DatabaseConnection databaseConnection = Launcher.databaseConnection;
         game_statsList = databaseConnection.getGameStatsList();
         inningList = databaseConnection.getInningList();
         plate_appearanceList = databaseConnection.getPlateAppearanceList();
